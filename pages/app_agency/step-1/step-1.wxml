@@ -1,0 +1,19 @@
+<!--pages/app_agency/step-1/step-1.wxml-->
+<image class='mb-40' src='http://img2.y01.cn/images/4/2019/03/xcp0tRqQc6765cpm7600R5PRCQqqQ5.png' mode='widthFix'></image>
+<van-cell-group>
+  <van-field value="{{ value }}" required label="联系人姓名" placeholder="您的称呼" bind:change="onChange" />
+  <van-field value="{{ value }}" required label="联系人电话" placeholder="请填写您的手机号" bind:change="onChange" />
+  <van-field value="{{ value }}" required label="联系人地址" placeholder="请输入地址" border="{{ false }}" bind:change="onChange" />
+</van-cell-group>
+<view class='mb-40'></view>
+<view class='up-img'>
+  <view class='title'>门店照和证件信息</view>
+  <view class='flex flex-jus mb-80'>
+    <block wx:for="{{userinfo.pic}}" wx:key="index">
+      <view bindtap='upPic' data-index="{{index}}">
+        <image src='{{item}}'></image>
+      </view>
+      </block>
+  </view>
+  <view class='big-btn' bindtap='next'>下一步</view>
+</view>

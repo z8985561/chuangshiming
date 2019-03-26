@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -55,6 +55,34 @@
 					"name": "提现",
 					"pathName": "pages/commission/apply/seconds",
 					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "申请成为代理",
+					"pathName": "pages/app_agency/app_agency",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请成为代理-1",
+					"pathName": "pages/app_agency/step-1/step-1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "申请成为代理-2",
+					"pathName": "pages/app_agency/step-2/step-2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "申请成为代理-3",
+					"pathName": "pages/app_agency/step-3/step-3",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

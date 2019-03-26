@@ -1,0 +1,15 @@
+/* pages/app_agency/step-1/step-1.wxss */
+image{
+  width: 100vw;
+}
+.up-img{
+  padding: 20rpx;
+  background-color: #fff;
+}
+.title{
+  margin-bottom: 20rpx;
+}
+.up-img image{
+  width: 345rpx;
+  height: 270rpx;
+}

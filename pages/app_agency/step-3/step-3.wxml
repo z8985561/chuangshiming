@@ -1,0 +1,22 @@
+<!--pages/app_agency/step-3/step-3.wxml-->
+<image class='mb-40' src='/static/images/header-3.png' mode='widthFix'></image>
+<van-cell-group>
+  <van-field value="{{ value }}" required label="身份证号码" placeholder="请输入您的身份证号" bind:change="onChange" />
+</van-cell-group>
+<view class='mb-40'></view>
+<view class='up-img'>
+  <view class='title'>证件信息</view>
+  <view class='flex flex-jus flex-wrap mb-20'>
+    <block wx:for="{{userinfo.pic}}" wx:key="index">
+      <view class='mb-20' bindtap='upPic' data-index="{{index}}">
+        <image src='{{item}}'></image>
+      </view>
+      </block>
+      <view class='mb-20'>
+        <image src='/static/images/icon-116.png'></image>
+      </view>
+  </view>
+  <view class='fz-26 c9'><text style='color:#D1B382'>*</text> 上传时请确保身份证照片内姓名，身份证号，有效期清晰</view>
+  <view class='fz-26 c9 mb-150'><text style='color:#D1B382'>*</text> 文件仅支持：jpg、png、gpeg</view>
+  <view class='big-btn' bindtap='next'>提交审核</view>
+</view>

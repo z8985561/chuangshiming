@@ -1,0 +1,11 @@
+/* pages/app_agency/app_agency.wxss */
+.banner{
+  width: 750rpx;
+  height: 330rpx;
+}
+.bg-f8{
+  background-color: #F8F8F8 !important;
+}
+.p-0{
+  padding: 0 !important;
+}

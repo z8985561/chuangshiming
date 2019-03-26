@@ -182,8 +182,10 @@ App({
   },
   globalData: {
     appid: "wx32b12b26bbfd1943",
-      api: "http://chuangshiming.com/app/ewei_shopv2_api.php?i=37",
-    approot: "http://chuangshiming.com/addons/ewei_shopv2/",
+    //   api: "http://chuangshiming.com/app/ewei_shopv2_api.php?i=37",
+    // approot: "http://chuangshiming.com/addons/ewei_shopv2/",
+    api: "http://www.w7.cc/app/ewei_shopv2_api.php?i=4",
+    approot: "http://www.w7.cc/addons/ewei_shopv2/",
     userInfo: "",
   }
 });

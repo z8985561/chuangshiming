@@ -1,0 +1,39 @@
+<!--pages/app_agency/step-2/step-2.wxml-->
+<image class='mb-40' src='/static/images/header-2.png' mode='widthFix'></image>
+
+<view class='goods-list'>
+  <view class='title'>产品订购</view>
+  <view class='goods-item mb-40'>
+    <image src='/static/images/goods-1.png'></image>
+    <view class='flex flex-column flex-jus'>
+      <view class='c6 fz-30'>创视明洗发水奢耀柔润去屑修护滋养洗发水、护发素二合一套装</view>
+      <view class='flex flex-jus'>
+        <view class='price'>￥188.00</view>
+        <van-stepper value="{{ value }}" plus-class="add-btn" minus-class="add-btn" integer min="1" max="1000" bind:change="onChange" />
+      </view>
+    </view>
+  </view>
+  <view class='goods-item mb-40'>
+    <image src='/static/images/goods-1.png'></image>
+    <view class='flex flex-column flex-jus'>
+      <view class='c6 fz-30'>创视明洗发水奢耀柔润去屑修护滋养洗发水、护发素二合一套装</view>
+      <view class='flex flex-jus'>
+        <view class='price'>￥188.00</view>
+        <van-stepper value="{{ value }}" plus-class="add-btn" minus-class="add-btn" integer min="1" max="1000" bind:change="onChange" />
+      </view>
+    </view>
+  </view>
+  <view class='sum flex flex-jus mb-150'>
+    <view>总计
+      <text class="red">4</text> 件商品</view>
+    <view>合计
+      <text class="red">￥598.00</text>
+    </view>
+  </view>
+  <van-checkbox value="{{ checked }}" checked-color="#D0B38A" bind:change="confirmEvent">
+    我已阅读并同意
+    <text style='color:#CAA974'>《代理协议》</text>
+  </van-checkbox>
+  <view class='mt-40'></view>
+  <view class='big-btn' bindtap='next'>下一步</view>
+</view>
