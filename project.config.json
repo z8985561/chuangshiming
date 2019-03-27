@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 9,
 			"list": [
 				{
 					"id": 0,
@@ -81,6 +81,20 @@
 					"id": 7,
 					"name": "申请成为代理-3",
 					"pathName": "pages/app_agency/step-3/step-3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分销中心",
+					"pathName": "pages/commission/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "我的积分",
+					"pathName": "pages/commission/my-integral/my-integral",
 					"query": "",
 					"scene": null
 				}

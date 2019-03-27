@@ -1,0 +1,57 @@
+/* pages/commission/my-integral/my-integral.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 340rpx;
+  background-image: url("http://kemanduos100.oss-cn-shenzhen.aliyuncs.com/images/37/2019/03/UyfYolK66C5Ya1X0q2a6g0QA2Y2xcO.png");
+  background-size: cover;
+}
+
+.header navigator {
+  width: 190rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #999;
+  border: 1px solid #666;
+  border-radius: 25rpx;
+  font-size: 22rpx;
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20rpx;
+  background-color: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+
+.picker {
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.screen-btn {
+  margin-left: 10rpx;
+  width: 80rpx;
+  height: 50rpx;
+  line-height:50rpx;
+  text-align: center; 
+  background: linear-gradient(90deg, rgba(237, 216, 185, 1), rgba(198, 164, 108, 1));
+  border-radius: 23px;
+}

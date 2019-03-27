@@ -1,6 +1,65 @@
 <block wx:if='{{!show}}'>
   <loading>加载中...</loading>
 </block>
+
+<!-- 新分销中心 -->
+<block wx:if='{{show}}'>
+  <view class='user_info'>
+    <view class='fui-list'>
+      <view class='fui-list-media'>
+        <image src='{{member.avatar}}'></image>
+      </view>
+      <view class='fui-list-inner'>
+        <view class='title'>{{member.nickname}}</view>
+        <view class='text'>{{set.texts.up}}：{{agentname}}</view>
+      </view>
+    </view>
+    <view class='flex flex-jus text-center' style='padding:50rpx 160rpx 0;'>
+      <view>
+        <view style='color:#CEAF7C' class='fz-34'>952.00元</view>
+        <view class='c6'>总收入</view>
+      </view>
+      <view>
+        <view style='color:#CEAF7C' class='fz-34'>895.00元</view>
+        <view class='c6'>可提现收入</view>
+      </view>
+    </view>
+    <view class='bar'></view>
+  </view>
+  <van-cell icon="gold-coin-o" title="分红中心" value="查看明细" border="{{false}}" is-link url="#" />
+  <view class='award mb-20'>
+    <view class='flex'>
+      <view class='award-item text-center'>
+        <view class='fz-28 red mb-20'>789.20</view>
+        <view class='fz-24 c9'>区域奖励(元)</view>
+      </view>
+      <view class='award-item text-center'>
+        <view class='fz-28 red mb-20'>789.20</view>
+        <view class='fz-24 c9'>代理奖励(元)</view>
+      </view>
+      <view class='award-item text-center'>
+        <view class='fz-28 red mb-20'>789.20</view>
+        <view class='fz-24 c9'>一级奖励(元)</view>
+      </view>
+      <view class='award-item text-center'>
+        <view class='fz-28 red mb-20'>789.20</view>
+        <view class='fz-24 c9'>二级奖励(元)</view>
+      </view>
+    </view>
+  </view>
+  <van-cell-group>
+    <van-cell title="区域奖励订单" icon="description" value="查看明细" is-link />
+    <van-cell title="代理奖励订单" icon="description" value="查看明细" is-link />
+    <van-cell title="一级奖励订单" icon="description" value="查看明细" is-link />
+    <van-cell title="二级奖励订单" icon="description" value="查看明细" is-link />
+    <van-cell title="销售奖励订单" icon="description" value="查看明细" is-link />
+    <van-cell title="我的会员" icon="contact" value="18人" is-link />
+    <van-cell title="我的积分" icon="points" value="878分" value-class="c-default" is-link />
+    <van-cell title="我的权益" icon="diamond-o" value="查看权益" is-link />
+    <van-cell title="" />
+  </van-cell-group>
+</block>
+<!-- 新分销中心  -->
 <block wx:if='{{show}}'>
   <view class='page commission'>
     <view class='user-info'>
@@ -22,7 +81,7 @@
       </view>
       <view class='line able'>
         <navigator class='btn pull-right disabled' hoverClass='none' url="{{set.commissionsettletype==0? '/pages/commission/withdraw/index': '/pages/commission/apply/seconds'}}">
-        {{set.texts.commission}}{{set.texts.withdraw}}</navigator>
+          {{set.texts.commission}}{{set.texts.withdraw}}</navigator>
         <view class='text'>
           <view>{{set.texts.commission_ok}}({{set.texts.yuan}})</view>
           <view class='num'>{{member.commission_ok}}</view>
@@ -35,28 +94,32 @@
           <image src='/static/images/icon-red/money.png'></image>
         </view>
         <view class='title'>{{set.texts.commission1}}</view>
-        <view class='text'><text>{{member.commission_total}}</text>{{set.texts.yuan}}</view>
+        <view class='text'>
+          <text>{{member.commission_total}}</text>{{set.texts.yuan}}</view>
       </navigator>
       <navigator class='fui-block-child' url='/pages/commission/order/index'>
         <view class='icon'>
           <image src='/static/images/icon-red/list.png'></image>
         </view>
         <view class='title'>{{set.texts.order}}</view>
-        <view class='text'><text>{{member.ordercount0}}</text>笔</view>
+        <view class='text'>
+          <text>{{member.ordercount0}}</text>笔</view>
       </navigator>
       <navigator class='fui-block-child' url='/pages/commission/log/index'>
         <view class='icon'>
           <image src='/static/images/icon-red/manage-order.png'></image>
         </view>
         <view class='title'>{{set.texts.commission_detail}}</view>
-        <view class='text'><text>{{member.applycount}}</text>笔</view>
+        <view class='text'>
+          <text>{{member.applycount}}</text>笔</view>
       </navigator>
       <navigator class='fui-block-child' url='/pages/commission/down/index'>
         <view class='icon'>
           <image src='/static/images/icon-red/group.png'></image>
         </view>
         <view class='title'>{{set.texts.mydown}}</view>
-        <view class='text'><text>{{member.downcount}}</text>人</view>
+        <view class='text'>
+          <text>{{member.downcount}}</text>人</view>
       </navigator>
       <block wx:if='{{set.closed_qrcode == 0}}'>
         <navigator class='fui-block-child' url='/pages/commission/poster/index'>
@@ -67,9 +130,9 @@
           <view class='text'></view>
         </navigator>
       </block>
-      
+
       <!-- 小店 -->
-       <block wx:if='{{set.closemyshop == 0}}'>
+      <block wx:if='{{set.closemyshop == 0}}'>
         <navigator class='fui-block-child' url='/pages/commission/myshop/index'>
           <view class='icon'>
             <image src='/static/images/icon-red/home.png'></image>
@@ -92,7 +155,7 @@
           <view class='text'></view>
         </navigator> -->
       </block>
-       <block wx:if='{{set.checkpower == 1}}'>
+      <block wx:if='{{set.checkpower == 1}}'>
         <navigator class='fui-block-child' url='/pages/commission/power/index'>
           <view class='icon'>
             <image src='/static/images/icon-red/code.png'></image>

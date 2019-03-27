@@ -1,0 +1,35 @@
+<!--pages/commission/my-integral/my-integral.wxml-->
+<view class='header'>
+  <view class='fz-26 c6 mb-20'>我的积分</view>
+  <view class='c-default mb-20' style='font-size:66rpx;'>8974</view>
+  <navigator url='#' hover-class='none'>兑换中心</navigator>
+  <view class='bar'></view>
+</view>
+<view class='flex flex-around'>
+  <view class='fz-34 {{param.active == 1 ? "c-default":"c9"}}' data-index='1' bindtap='onChangType'>收入</view>
+  <view class='fz-34 {{param.active == 2 ? "c-default":"c9"}}' data-index='2' bindtap='onChangType'>支出</view>
+</view>
+<view class='flex flex-jus flex-align-center plr-20' style='background-color:#f8f8f8;padding-top:10rpx;padding-bottom:10rpx;'>
+  <view class='fz-28 c9'>选择查询范围</view>
+  <view class='flex'>
+    <picker mode="date" fields="month" value="{{param.startDate}}" bindchange="startDateChange">
+      <view class="picker c9 fz-28 sanjiao">
+        {{param.startDate}}
+      </view>
+    </picker>
+    <text class='plr-20'>到</text>
+    <picker mode="date" fields="month" value="{{param.endtDate}}" bindchange="endDateChange">
+      <view class="picker c9 fz-28 sanjiao">
+        {{param.endtDate}}
+      </view>
+    </picker>
+    <view class='fz-24 cf screen-btn' bindtap='screenEvent'>筛选</view>
+  </view>
+</view>
+<van-cell-group>
+  <block wx:for="{{list}}" wx:key="index">
+    <van-cell title="{{item.title}}" value-class="{{ param.active == 1 ? 'c-default':'' }}" title-width="70%" value="{{item.num}}" label="{{item.time}}" />
+  </block>
+</van-cell-group>
+<view hidden='{{show}}' class='text-center fz-30 c6' style='padding:20rpx 0;'>暂无更多数据</view>
+<view wx:if="{{show}}" class='text-center fz-30 c6' style='padding:20rpx 0;' bindtap='getMoreData'>加载更多 >></view>

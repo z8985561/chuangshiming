@@ -72,6 +72,7 @@
     "pages/commission/myshop/select",
     "pages/commission/myshop/index",
     "pages/commission/cashbe/index",
+    "pages/commission/my-integral/my-integral",
     "pages/goods/package/index",
     "pages/goods/package/detail/index",
     "pages/verifygoods/index",
@@ -79,7 +80,8 @@
     "pages/app_agency/app_agency",
     "pages/app_agency/step-1/step-1",
     "pages/app_agency/step-2/step-2",
-    "pages/app_agency/step-3/step-3"
+    "pages/app_agency/step-3/step-3",
+    "pages/my_cloud/my_cloud"
   ],
   "subPackages":[
     {

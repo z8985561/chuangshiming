@@ -2,6 +2,5 @@
   "usingComponents": {
     "van-cell": "/vant-ui/cell/index",
     "van-cell-group": "/vant-ui/cell-group/index"
-  },
-  "navigationBarTitleText": "分销中心"
+  }
 }

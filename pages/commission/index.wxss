@@ -16,3 +16,46 @@
 .commission .fui-block-group .fui-block-child .icon{ height: auto }
 .commission .fui-block-group .fui-block-child .icon wx-image{ width: 70rpx; height: 70rpx; }
 .edtion{ width: 100%; position: fixed; bottom:100rpx; color: #999999; font-size: 14px; text-align: center; padding: 20rpx 0; }
+.user_info{
+  position: relative;
+  width: 100vw;
+  height: 380rpx;
+  background-image: url("http://kemanduos100.oss-cn-shenzhen.aliyuncs.com/images/37/2019/03/D2wB88I1LXFwWX13B1xaBb8IVWWaA8.png");
+  background-size: cover;
+}
+.fui-list-media image{
+  border-radius:50%;
+  font-size: 34rpx;
+}
+.fui-list-inner .title{
+  color: #CCCCCC;
+  font-weight: 700;
+}
+.bar{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20rpx;
+  background-color: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.award{
+  position: relative;
+  height: 190rpx;
+  width: 100vw;
+  background-color: #fff;
+}
+.award > view{
+  position: absolute;
+  left: 20rpx;
+  right: 20rpx;
+  top: 0;
+  bottom: 4rpx;
+  align-items: center;
+  box-shadow: 0 0 10px #ccc;
+}
+.award .award-item{
+  width:25%; 
+}
