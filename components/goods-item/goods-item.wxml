@@ -1,0 +1,35 @@
+<!--components/goods-item/goods-item.wxml-->
+<view class='goods-item'>
+  <view class='goods-detail plr-20'>
+    <image src='{{goodsData.thumb}}'></image>
+    <view class='plr-20 flex flex-column flex-jus' style='flex:1'>
+      <view class='fz-26 c6'>{{goodsData.title}}</view>
+      <view class='fz-30 c-default'>￥{{goodsData.price}}</view>
+    </view>
+    <view class='flex flex-column flex-jus'>
+      <view class='fz-24 c9 text-right {{showStock ? "op":""}}'>库存{{goodsData.mstock}}件</view>
+      <view>
+        <block wx:if="{{goodsData.hasoption != 1}}">
+          <van-stepper value="{{ 0 }}" integer min="0" max="1000" step="1" bind:change="onChange" plus-class="add-btn" minus-class="add-btn" input-class="input-class" data-type="parent" />
+        </block>
+        <block wx:if="{{goodsData.hasoption == 1}}">
+          <view class='show-list {{show ? "":"on"}}' bindtap='showList'>
+            <van-icon name="arrow" color='#ffffff'/>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='option-list' wx:if="{{goodsData.hasoption == 1}}" hidden='{{show}}'>
+    <block wx:for="{{goodsData.options}}" wx:key="index">
+      <view class='flex flex-jus plr-20 mb-20'>
+        <view class='fz-26 c6'>规格：{{item.title}}</view>
+        <view class='fz-26  c-default'>￥{{item.mprice}}</view>
+        <view class='fz-26 c6'>库存{{item.mstock}}件</view>
+        <view>
+          <van-stepper value="{{ 0 }}" integer min="0" max="1000" step="1" bind:change="onChange" plus-class="add-btn" minus-class="add-btn" input-class="input-class" data-index="{{index}}" data-type="son"/>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

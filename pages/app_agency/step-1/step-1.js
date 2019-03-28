@@ -10,7 +10,7 @@ Page({
       name:"",
       phone:"",
       address:"",
-      pic: ["/static/images/icon-111.png","/static/images/icon-112.png"]
+      store_pic: ["/static/images/icon-111.png","/static/images/icon-112.png"],
     }
   },
   upPic(e){
@@ -24,7 +24,7 @@ Page({
       })
       console.log(res)
       if (res.status){
-        json.pic[index] = res.url;
+        json.store_pic[index] = res.url;
         that.setData({
           userinfo: json
         })
@@ -52,9 +52,38 @@ Page({
       console.log(type, value, userinfo)
   },
   next(e){
+      var that = this;
+     var userinfo = that.data.userinfo;
+      if(!userinfo.name){
+          that.error('请输入姓名')
+          return 
+      }
+      if(!userinfo.phone){
+          that.error('请输入手机号')
+          return
+      } 
+      if(!userinfo.address){
+          that.error('请输入地址')
+          return
+      } 
+      if (userinfo.store_pic[0] =='/static/images/icon-111.png'){
+          that.error('请上传门店照片')
+          return 
+      } 
+      if (userinfo.store_pic[1] == "/static/images/icon-112.png"){
+          that.error('请上传营业执照')
+          return 
+      } 
       wx.setStorageSync('userinfo', this.data.userinfo);
       wx.navigateTo({
           url: '/pages/app_agency/step-2/step-2',
+      })
+  },
+  error(msg){
+      wx.showToast({
+          title: msg,
+          icon:'none',
+          duration:1000
       })
   },
   /**

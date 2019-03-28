@@ -1,6 +1,6 @@
 {
   "usingComponents": {
     "van-checkbox": "/vant-ui/checkbox/index",
-    "van-stepper": "/vant-ui/stepper/index"
+    "goods-item": "/components/goods-item/goods-item"
   }
 }

@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 13,
 			"list": [
 				{
 					"id": 0,
@@ -109,6 +109,20 @@
 					"id": -1,
 					"name": "奖励订单",
 					"pathName": "pages/commission/reward_orders/reward_orders",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的云仓",
+					"pathName": "pages/my_cloud/my_cloud",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的云仓1",
+					"pathName": "pages/my_cloud/storehouse/storehouse",
 					"query": "",
 					"scene": null
 				}

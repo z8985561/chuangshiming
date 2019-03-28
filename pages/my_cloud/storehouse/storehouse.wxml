@@ -1,0 +1,11 @@
+<!--pages/my_cloud/storehouse/storehouse.wxml-->
+<view class='mb-150'>
+  <block wx:for="{{list}}" wx:key="index">
+    <goods-item goodsData="{{item}}" itemIndex="{{index}}" bind:_onChange="upCountEvent"></goods-item>
+  </block>
+</view>
+<van-submit-bar price="{{ price }}" button-text="去进货" button-class="sumbit-btn" bind:submit="onSubmit">
+  <van-tag type="primary">
+    <van-icon custom-class="ml-40" name="shopping-cart-o" size='30px' info="{{num}}" />
+  </van-tag>
+</van-submit-bar>

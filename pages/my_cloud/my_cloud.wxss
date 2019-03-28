@@ -1,1 +1,39 @@
 /* pages/my_cloud/my_cloud.wxss */
+page {
+  background-color: #fff;
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  width: 100vw;
+  height: 260rpx;
+  background-image: url("http://kemanduos100.oss-cn-shenzhen.aliyuncs.com/images/37/2019/03/UyfYolK66C5Ya1X0q2a6g0QA2Y2xcO.png");
+  background-size: cover;
+  box-sizing: border-box;
+}
+.header .flag{
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 25rpx;
+  font-size: 26rpx;
+}
+.header image{
+  border-radius: 50%;
+}
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20rpx;
+  background-color: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}

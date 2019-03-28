@@ -83,7 +83,8 @@
     "pages/app_agency/step-2/step-2",
     "pages/app_agency/step-3/step-3",
     "pages/app_agency/notice/index",
-    "pages/my_cloud/my_cloud"
+    "pages/my_cloud/my_cloud",
+    "pages/my_cloud/storehouse/storehouse"
   ],
   "subPackages":[
     {

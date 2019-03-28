@@ -9,7 +9,7 @@
 <view class='up-img'>
   <view class='title'>门店照和证件信息</view>
   <view class='flex flex-jus mb-80'>
-    <block wx:for="{{userinfo.pic}}" wx:key="index">
+    <block wx:for="{{userinfo.store_pic}}" wx:key="index">
       <view bindtap='upPic' data-index="{{index}}">
         <image src='{{item}}'></image>
       </view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-submit-bar": "/vant-ui/submit-bar/index",
+    "van-icon": "/vant-ui/icon/index",
+    "goods-item":"/components/goods-item/goods-item"
+  },
+  "navigationBarTitleText": "我的云仓"
+}

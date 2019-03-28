@@ -1,31 +1,18 @@
-/* pages/app_agency/step-2/step-2.wxss */
 image{
   width: 100vw;
 }
 .goods-list{
-  padding: 20rpx;
-  height: 80vh;
+  position: absolute;
+  top: 212rpx;
+  bottom: 300rpx;
   background-color: #fff;
-  overflow: hidden;
+  overflow: scroll;
 }
-.goods-item{
-  display: flex;
-}
-.goods-item > image{
-  width: 196rpx;
-  height: 196rpx;
-  margin-right: 20rpx;
-}
-.goods-item > view{
-  flex: 1;
-}
-.add-btn{
-  width: 30px !important;
-}
-.price{
-  color: #D0B38A;
-}
-.sum{
-  padding-top: 30rpx;
-  border-top: 1px solid #EEEEEE;
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 10rpx;
+  background-color: #fff;
 }

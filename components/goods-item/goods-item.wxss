@@ -1,0 +1,41 @@
+/* components/goods-item/goods-item.wxss */
+.goods-item{
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  background-color: #fff;
+  border-bottom: 40rpx solid #f5f5f5;
+}
+.goods-detail{
+  display: flex;
+  margin-bottom: 10rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.goods-detail image{
+  width: 196rpx;
+  height: 196rpx;
+}
+.add-btn{
+  width: 20px !important;
+  height: 20px !important;
+}
+.input-class{
+  width: 30px !important;
+  height: 20px !important;
+}
+.show-list{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background-color: #414141;
+  border-radius: 50%;
+  transition: .1s;
+}
+.show-list.on{
+  transform: rotate(90deg);
+}
+.op{
+  opacity: 0;
+}

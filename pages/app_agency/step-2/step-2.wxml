@@ -2,32 +2,29 @@
 <image class='mb-40' src='/static/images/header-2.png' mode='widthFix'></image>
 
 <view class='goods-list'>
-  <view class='title'>产品订购</view>
-  <view class='goods-item mb-40'>
-    <image src='/static/images/goods-1.png'></image>
-    <view class='flex flex-column flex-jus'>
-      <view class='c6 fz-30'>创视明洗发水奢耀柔润去屑修护滋养洗发水、护发素二合一套装</view>
-      <view class='flex flex-jus'>
-        <view class='price'>￥188.00</view>
-        <van-stepper value="{{ value }}" plus-class="add-btn" minus-class="add-btn" integer min="1" max="1000" bind:change="onChange" />
-      </view>
-    </view>
-  </view>
-  <view class='goods-item mb-40'>
-    <image src='/static/images/goods-1.png'></image>
-    <view class='flex flex-column flex-jus'>
-      <view class='c6 fz-30'>创视明洗发水奢耀柔润去屑修护滋养洗发水、护发素二合一套装</view>
-      <view class='flex flex-jus'>
-        <view class='price'>￥188.00</view>
-        <van-stepper value="{{ value }}" plus-class="add-btn" minus-class="add-btn" integer min="1" max="1000" bind:change="onChange" />
-      </view>
-    </view>
-  </view>
-  <view class='sum flex flex-jus mb-150'>
+  <view class='title plr-20 fz-30'>产品订购</view>
+  <block wx:for="{{list}}" wx:key="index">
+    <goods-item goodsData="{{item}}" itemIndex="{{index}}" showStock="{{true}}" bind:_onChange="upCountEvent"></goods-item>
+  </block>
+  <!-- <view wx:for="{{goodslist}}" class='goods-item mb-40'>
+    <block wx:if="{{item.hasoption==0}}">
+        <image src="{{item.thumb}}"></image>
+        <view class='flex flex-column flex-jus'>
+            <view class='c6 fz-30'>{{item.title}}</view>
+            <view class='flex flex-jus'>
+                <view class='price'>￥{{item.price}}</view>
+                <van-stepper value="{{ value }}" plus-class="add-btn" data-index="{{index}}" data-type="goodsid" data-price="{{item.price}}" data-hasoption="{{item.hasoption}}" data-id="{{item.id}}" id="{{item.id}}"  minus-class="add-btn" integer min="0" max="1000" bind:change="onChange" />
+            </view>
+        </view>
+    </block>
+  </view> -->
+</view>
+<view class='footer plr-20'>
+  <view class='sum flex flex-jus mb-80 p-10'>
     <view>总计
-      <text class="red">4</text> 件商品</view>
+      <text class="red">{{num}}</text> 件商品</view>
     <view>合计
-      <text class="red">￥598.00</text>
+      <text class="red">￥{{price}}</text>
     </view>
   </view>
   <van-checkbox value="{{ checked }}" checked-color="#D0B38A" bind:change="confirmEvent">
@@ -35,5 +32,5 @@
     <text style='color:#CAA974'>《代理协议》</text>
   </van-checkbox>
   <view class='mt-40'></view>
-  <view class='big-btn' bindtap='next'>下一步</view>
+  <view class='big-btn' bindtap='onSubmit'>下一步</view>
 </view>
