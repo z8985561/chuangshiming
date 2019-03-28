@@ -6,7 +6,9 @@ Page({
    */
   data: {
     value:1,
-    checked:false
+    checked:false,
+    goodslist:[],
+    goods:[]
   },
   confirmEvent(){
     this.data.checked
@@ -20,7 +22,14 @@ Page({
   onLoad: function (options) {
 
   },
+    next(e) {
+        wx.navigateTo({
+            url: '/pages/app_agency/step-3/step-3',
+        })
+    },
+    onChange(e){
 
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

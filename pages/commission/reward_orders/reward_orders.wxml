@@ -1,0 +1,51 @@
+<!--pages/commission/reward_orders/reward_orders.wxml-->
+<view class='header'>
+  <view class='fz-26 c6 mb-20'>累计区域奖励</view>
+  <view class='c-default mb-20' style='font-size:66rpx;'>289.52元</view>
+  <view class='bar'></view>
+</view>
+<view class='flex flex-jus plr-20'>
+  <view class='flex flex-align-center'>
+    <van-icon name="description" size='40rpx' color='#D0B38A' />
+    <view class='ml-10 fz-34'>区域订单</view>
+  </view>
+  <picker mode="date" fields="month" value="{{param.time}}" bindchange="bindTimeChange">
+    <view class="picker sanjiao">
+      {{param.time}}
+    </view>
+  </picker>
+</view>
+<view class='order-list'>
+<block wx:for="{{list}}" wx:key="index">
+  <view class='order-item'>
+    <view class='flex flex-jus plr-20'>
+      <view class='flex flex-align-center'>
+        <image class='touxiang' src='{{item.avatar}}'></image>
+        <view class='ml-10 fz-26 c9'>{{item.nickname}}</view>
+      </view>
+      <view class='fz-30 red'>+{{item.reward}}</view>
+    </view>
+    <view class='flex flex-jus plr-20 mb-20'>
+      <image class='goods-pic' src='{{item.thumb}}'></image>
+      <view class='flex flex-column flex-around plr-20' style='flex:1'>
+        <view class='fz-30 c9'>{{item.title}}</view>
+        <view class='fz-30 c9'>￥{{item.goodsprice}}</view>
+      </view>
+      <view class='flex flex-column flex-around'>
+        <view class='fz-30 c9 text-right'>x {{item.total}}</view>
+        <view class='fz-28 c-default'>{{item.statusstr}}</view>
+      </view>
+    </view>
+    <view class='plr-20'>
+      <van-cell-group>
+        <van-cell title="订单总价：" title-width="100px" custom-class="p-10" value="￥{{item.price}}" border="{{ false }}" />
+        <van-cell title="订单编号：" title-width="100px" custom-class="p-10" value="{{item.ordersn}}" border="{{ false }}" />
+        <van-cell title="下单时间：" title-width="100px" custom-class="p-10" value="{{item.createtime}}" border="{{ false }}" />
+        <van-cell title="获得奖励：" title-width="100px" custom-class="p-10" value="￥{{item.reward}} " border="{{ false }}" />
+      </van-cell-group>
+    </view>
+  </view>
+  </block>
+</view>
+<view hidden='{{show}}' class='text-center fz-30 c6' style='padding:20rpx 0;'>暂无更多数据</view>
+<view wx:if="{{show}}" class='text-center fz-30 c6' style='padding:20rpx 0;' bindtap='getMoreData'>加载更多 >></view>

@@ -13,6 +13,10 @@
         <view class='title'>{{member.nickname}}</view>
         <view class='text'>{{set.texts.up}}：{{agentname}}</view>
       </view>
+      <navigator class='withdraw' hover-class='none' url='#'>
+        <view>￥</view>
+        <view>提现</view>
+      </navigator>
     </view>
     <view class='flex flex-jus text-center' style='padding:50rpx 160rpx 0;'>
       <view>
@@ -26,7 +30,7 @@
     </view>
     <view class='bar'></view>
   </view>
-  <van-cell icon="gold-coin-o" title="分红中心" value="查看明细" border="{{false}}" is-link url="#" />
+  <van-cell icon="gold-coin-o" title="分红中心" value="" border="{{false}}"/>
   <view class='award mb-20'>
     <view class='flex'>
       <view class='award-item text-center'>
@@ -48,13 +52,13 @@
     </view>
   </view>
   <van-cell-group>
-    <van-cell title="区域奖励订单" icon="description" value="查看明细" is-link />
-    <van-cell title="代理奖励订单" icon="description" value="查看明细" is-link />
-    <van-cell title="一级奖励订单" icon="description" value="查看明细" is-link />
-    <van-cell title="二级奖励订单" icon="description" value="查看明细" is-link />
-    <van-cell title="销售奖励订单" icon="description" value="查看明细" is-link />
-    <van-cell title="我的会员" icon="contact" value="18人" is-link />
-    <van-cell title="我的积分" icon="points" value="878分" value-class="c-default" is-link />
+    <van-cell title="区域奖励订单" icon="description" value="查看明细" is-link url="/pages/commission/reward_orders/reward_orders?type=1"/>
+    <van-cell title="代理奖励订单" icon="description" value="查看明细" is-link url="/pages/commission/reward_orders/reward_orders?type=2"/>
+    <van-cell title="一级奖励订单" icon="description" value="查看明细" is-link url="/pages/commission/reward_orders/reward_orders?type=3"/>
+    <van-cell title="二级奖励订单" icon="description" value="查看明细" is-link url="/pages/commission/reward_orders/reward_orders?type=4"/>
+    <van-cell title="销售奖励订单" icon="description" value="查看明细" is-link url="/pages/commission/reward_orders/reward_orders?type=5"/>
+    <van-cell title="我的会员" icon="contact" value="18人" is-link url="./down/index" />
+    <van-cell title="我的积分" icon="points" value="878分" value-class="c-default" is-link url="/pages/commission/my-integral/my-integral" />
     <van-cell title="我的权益" icon="diamond-o" value="查看权益" is-link />
     <van-cell title="" />
   </van-cell-group>

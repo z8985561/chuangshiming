@@ -1,0 +1,9 @@
+<!--pages/app_agency/notice/index.wxml-->
+  <view style='text-align:center;'>{{level.levelname}}</view>
+  <import src="/utils/wxParse/wxParse.wxml" />
+  <view wx:if="{{level.content}}" class='wxParse' style='margin:0px;text-align:center;'>
+    <template is='wxParse' data='{{ wxParseData:htmlcontent.nodes}}' />
+  </view>
+  <view wx:else style='margin:0px;text-align:center;'>
+  暂无说明
+  </view>

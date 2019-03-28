@@ -1,11 +1,15 @@
 // pages/app_agency/app_agency.js
+var e = getApp(),
+  t = e.requirejs("core"),
+  a = e.requirejs("wxParse/wxParse"),
+  r = e.requirejs("jquery");
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    activeName: '1'
+    level:{},
+    activeName: ''
   },
   onChange(event) {
     this.setData({
@@ -16,7 +20,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      this.getlevel();
   },
 
   /**
@@ -25,12 +29,21 @@ Page({
   onReady: function () {
 
   },
+  getlevel(){
+      var that  = this;
+      t.get('member/getlevel',{},function(res){
+          console.log(res)
+          that.setData({
+              level:res.level
+          })
+      })    
+  },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+      console.log(this.data)
   },
 
   /**

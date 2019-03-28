@@ -3,16 +3,8 @@
   <image class='banner' src='http://img2.y01.cn/images/4/2019/03/U2894xE2i4W2zIQ2262s9Wi3XehGq8.png'></image>
 </navigator>
 <van-collapse value="{{ activeName }}" bind:change="onChange" accordion>
-  <van-collapse-item content-class="p-0" title="申请成为VIP会员" name="1">
-    <van-cell custom-class="bg-f8" title="立即申请" is-link url="/pages/index/index" />
-    <van-cell custom-class="bg-f8" title="VIP会员申请说明" border="{{false}}" is-link url="/pages/index/index" />
-  </van-collapse-item>
-  <van-collapse-item content-class="p-0" title="申请成为特约代理" name="2">
-    <van-cell custom-class="bg-f8" title="立即申请" is-link url="/pages/index/index" />
-    <van-cell custom-class="bg-f8" title="VIP会员申请说明" border="{{false}}" is-link url="/pages/index/index" />
-  </van-collapse-item>
-  <van-collapse-item content-class="p-0" title="申请成为区域代理" name="3">
-    <van-cell custom-class="bg-f8" title="立即申请" is-link url="/pages/index/index" />
-    <van-cell custom-class="bg-f8" title="VIP会员申请说明" border="{{false}}" is-link url="/pages/index/index" />
+  <van-collapse-item wx:for="{{level}}" content-class="p-0" title="申请成为{{item.levelname}}" name="{{index}}">
+    <van-cell custom-class="bg-f8" title="立即申请" is-link url="/pages/app_agency/step-1/step-1?id={{item.id}}" />
+    <van-cell custom-class="bg-f8" title="{{item.levelname}}申请说明" border="{{false}}" is-link url="/pages/app_agency/notice/index?id={{item.id}}" />
   </van-collapse-item>
 </van-collapse>

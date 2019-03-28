@@ -1,9 +1,9 @@
 <!--pages/app_agency/step-1/step-1.wxml-->
 <image class='mb-40' src='http://img2.y01.cn/images/4/2019/03/xcp0tRqQc6765cpm7600R5PRCQqqQ5.png' mode='widthFix'></image>
 <van-cell-group>
-  <van-field value="{{ value }}" required label="联系人姓名" placeholder="您的称呼" bind:change="onChange" />
-  <van-field value="{{ value }}" required label="联系人电话" placeholder="请填写您的手机号" bind:change="onChange" />
-  <van-field value="{{ value }}" required label="联系人地址" placeholder="请输入地址" border="{{ false }}" bind:change="onChange" />
+  <van-field value="{{ userinfo.name }}" required label="联系人姓名" data-type="name" placeholder="您的称呼" bind:change="onChange" />
+  <van-field value="{{ userinfo.phone }}" required label="联系人电话" data-type="phone" placeholder="请填写您的手机号" bind:change="onChange" />
+  <van-field value="{{ userinfo.address }}" required label="联系人地址" data-type="address" placeholder="请输入地址" border="{{ false }}" bind:change="onChange" />
 </van-cell-group>
 <view class='mb-40'></view>
 <view class='up-img'>

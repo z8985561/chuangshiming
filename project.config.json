@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 11,
 			"list": [
 				{
 					"id": 0,
@@ -95,6 +95,20 @@
 					"id": 9,
 					"name": "我的积分",
 					"pathName": "pages/commission/my-integral/my-integral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "提现",
+					"pathName": "pages/commission/withdraw/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "奖励订单",
+					"pathName": "pages/commission/reward_orders/reward_orders",
 					"query": "",
 					"scene": null
 				}

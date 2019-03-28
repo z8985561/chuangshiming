@@ -22,6 +22,7 @@ Page({
       wx.showLoading({
         title: '上传中...',
       })
+      console.log(res)
       if (res.status){
         json.pic[index] = res.url;
         that.setData({
@@ -40,11 +41,28 @@ Page({
       }
     })
   },
+  onChange(e){
+      var userinfo = this.data.userinfo;
+      var type = e.currentTarget.dataset.type;
+      var value = e.detail;
+        userinfo[type] = value;
+        this.setData({
+            userinfo:userinfo
+        })
+      console.log(type, value, userinfo)
+  },
+  next(e){
+      wx.setStorageSync('userinfo', this.data.userinfo);
+      wx.navigateTo({
+          url: '/pages/app_agency/step-2/step-2',
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+      wx.setStorageSync('levelid', options.id)
+    console.log(options)
   },
 
   /**
@@ -58,7 +76,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(wx.getStorageSync('levelid'))
   },
 
   /**

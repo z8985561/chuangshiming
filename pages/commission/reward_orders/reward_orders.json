@@ -1,7 +1,7 @@
 {
   "usingComponents": {
+    "van-icon": "/vant-ui/icon/index",
     "van-cell": "/vant-ui/cell/index",
     "van-cell-group": "/vant-ui/cell-group/index"
-  },
-  "navigationBarTitleText": "我的积分"
+  }
 }

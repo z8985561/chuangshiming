@@ -3661,8 +3661,10 @@ page {
 .c-default{color: #CEAF7C !important}
 /* 内边距 */
 .plr-20{padding-left: 20rpx;padding-right: 20rpx;}
+.p-10{padding:10rpx !important;}
 /* 外边距 */
 .mb-10{margin-bottom: 10rpx;}
+.ml-10{margin-left: 10rpx;}
 .ml-40{margin-left: 40rpx;}
 .ml-60{margin-left: 60rpx;}
 .ml-80{margin-left: 80rpx;}

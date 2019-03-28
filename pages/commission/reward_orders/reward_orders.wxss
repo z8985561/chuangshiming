@@ -1,0 +1,41 @@
+/* pages/commission/reward_orders/reward_orders.wxss */
+page {
+  background-color: #fff;
+}
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 260rpx;
+  background-image: url("http://kemanduos100.oss-cn-shenzhen.aliyuncs.com/images/37/2019/03/UyfYolK66C5Ya1X0q2a6g0QA2Y2xcO.png");
+  background-size: cover;
+}
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20rpx;
+  background-color: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.picker{
+  padding-right: 30rpx;
+}
+.touxiang{
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
+}
+.order-item{
+  padding: 20rpx 0;
+  border-top: 20rpx solid #F7F7F7;
+}
+.goods-pic{
+  width: 110rpx;
+  height: 110rpx;
+}
