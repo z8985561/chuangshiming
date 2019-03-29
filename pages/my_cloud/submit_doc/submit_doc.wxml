@@ -1,0 +1,44 @@
+<!--pages/my_cloud/submit_doc/submit_doc.wxml-->
+<view class="fui-cell-group mb-80" id="addressInfo">
+  <navigator class="fui-cell" hoverClass="none" openType="navigate" style="padding-top:32rpx;padding-bottom:32rpx" url="/pages/member/address/select" wx:if="{{list.address}}">
+    <view class="fui-cell-icon" style="margin-right:24rpx" wx:if="{{list.address}}">
+      <text class="icox icox-dingwei1"></text>
+    </view>
+    <view class="fui-cell-text textl info" style="{{list.address?'':'display:flex;justify-content: center;'}}">
+      <view class="fui-cell-icon" wx:if="{{!list.address}}">
+        <text class="icox icox-icon02" style="color:#ff5555"></text>
+      </view>
+      <view class="has-address " wx:if="{{list.address}}">
+        <view>收货人：</view>
+        <text class="name">{{list.address.realname}} </text>
+        <text class="mobile">{{list.address.mobile}}</text>
+      </view>
+      <view class="adress" wx:if="{{list.address}}">{{list.address.province+list.address.city+list.address.area+' '+list.address.address}}</view>
+      <view bindtap="address" class="text no-address" data-type="open" wx:if="{{!list.address}}">添加收货地址</view>
+    </view>
+    <view class="fui-cell-remark"></view>
+  </navigator>
+  <navigator class="fui-cell" hoverClass="none" openType="navigate" style="padding-top:32rpx;padding-bottom:32rpx" url="/pages/member/address/post?type=quickaddress" wx:if="{{!list.address&&!list.isonlyverifygoods}}">
+    <view class="fui-cell-text textl info" style="display:flex;justify-content: center;">
+      <view class="fui-cell-icon">
+        <text class="icox icox-icon02" style="color:#ff5555"></text>
+      </view>
+      <view class="text no-address" data-type="open">添加收货地址</view>
+    </view>
+    <view class="fui-cell-remark"></view>
+  </navigator>
+</view>
+<view class='flex flex-column flex-jus flex-align-center' style='height:400px;'>
+  <view>
+    <van-icon name="after-sale" size='140px' color='#D0B38A' />
+    <view class='fz-30 c6 text-center'>提交转账凭证</view>
+  </view>
+  <view class='add' bindtap='submitDoc'>
+    <image wx:if="{{!docPic}}" src='/static/images/icon-white/add.png'></image>
+    <view wx:if="{{docPic}}" class='doc-pic' catchtap='fn'>
+      <image src='{{docPic}}'></image>
+      <van-icon name="close" size='24' bind:click="closePic"/>
+    </view>
+  </view>
+  <view class='big-btn' bindtap='submitEvent'>确认提交</view>
+</view>

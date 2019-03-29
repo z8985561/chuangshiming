@@ -1,0 +1,12 @@
+/* pages/my_cloud/order/order.wxss */
+.order-list{
+  padding: 20rpx 0;
+  background-color: #fff;
+}
+.border-b{
+  border-bottom:1px solid #eee;
+}
+.width{
+  width: 100% !important;
+  background-color:#fff !important;
+}

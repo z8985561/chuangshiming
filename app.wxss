@@ -3657,10 +3657,11 @@ page {
 .ca{color:#aaa;}
 .cc{color:#ccc;}
 .cf{color:#fff;}
-.red{color: #EE6955}
+.red{color: #EE6955 !important;}
 .c-default{color: #CEAF7C !important}
 /* 内边距 */
 .plr-20{padding-left: 20rpx;padding-right: 20rpx;}
+.ptb-20{padding-top: 20rpx;padding-bottom: 20rpx;}
 .p-10{padding:10rpx !important;}
 /* 外边距 */
 .mb-10{margin-bottom: 10rpx;}

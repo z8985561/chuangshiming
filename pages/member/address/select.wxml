@@ -7,10 +7,10 @@
       <block wx:for='{{list}}' wx:for-item='item' wx:for-index='index' wx:key="*this">
         <view class='fui-list-group'>
           <view class='fui-list address-item'>
-            <view class='fui-list-media' data-index='{{index}}' bindtap='select'>
+            <view class='fui-list-media' data-index='{{index}}' data-id='{{item.id}}' bindtap='select'>
               <radio color='#fd5454' checked='{{item.isdefault > 0?1:0}}' class='zoom-70' name='default'></radio>
             </view>
-            <view class='fui-list-inner' data-index='{{index}}' bindtap='select'>
+            <view class='fui-list-inner' data-index='{{index}}' data-id='{{item.id}}' bindtap='select'>
               <view class='title'>{{item.realname}} {{item.mobile}}</view>
               <view class='text'>{{item.province}}{{item.city}}{{item.area}} {{item.address}}</view>
             </view>

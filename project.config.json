@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 13,
+			"current": 15,
 			"list": [
 				{
 					"id": 0,
@@ -124,6 +124,19 @@
 					"name": "我的云仓1",
 					"pathName": "pages/my_cloud/storehouse/storehouse",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "进货订单",
+					"pathName": "pages/my_cloud/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提交凭证",
+					"pathName": "pages/my_cloud/submit_doc/submit_doc",
 					"scene": null
 				}
 			]

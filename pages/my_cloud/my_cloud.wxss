@@ -27,6 +27,9 @@ page {
 .header image{
   border-radius: 50%;
 }
+.text{
+    color:#fff;
+}
 .bar {
   position: absolute;
   left: 0;

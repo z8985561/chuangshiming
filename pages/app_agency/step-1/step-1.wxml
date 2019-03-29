@@ -11,7 +11,7 @@
   <view class='flex flex-jus mb-80'>
     <block wx:for="{{userinfo.store_pic}}" wx:key="index">
       <view bindtap='upPic' data-index="{{index}}">
-        <image src='{{item}}'></image>
+        <image src='{{item||pic[index]}}'></image>
       </view>
       </block>
   </view>

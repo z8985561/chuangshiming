@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-icon": "/vant-ui/icon/index"
+  },
+  "navigationBarTitleText":"提交凭证"
+}

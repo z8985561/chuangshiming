@@ -1,10 +1,14 @@
 <!--pages/my_cloud/my_cloud.wxml-->
 <view class='header'>
-  <image src='https://wx.qlogo.cn/mmopen/vi_32/5dibJVwrj2eplYprLvAezibA217AXwYUnuKAibscLJn0zygUOmoD5A2JLXY7ibKbhI72zdO98CvASRLHfv9mZzm5Bw/132'></image>
-  <view class='flag'>区级代理</view>
+  <view>
+     <image src="{{info.avatar}}"></image>
+  <view class='text'>{{info.nickname}}</view>
+  </view>
+ 
+  <view class='flag'>{{info.levelname}}</view>
   <view class='bar'></view>
 </view>
 <van-cell-group>
   <van-cell title="我的云仓" icon="points" is-link url="/pages/my_cloud/storehouse/storehouse"/>
-  <van-cell title="进货订单" icon="description" is-link url=""/>
+  <van-cell title="进货订单" icon="description" is-link url="/pages/my_cloud/order/order"/>
 </van-cell-group>

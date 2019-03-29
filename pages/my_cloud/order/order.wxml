@@ -1,0 +1,27 @@
+<!--pages/my_cloud/order/order.wxml-->
+<van-tabs color="#414141" active="{{ active }}" bind:click="onChange">
+  <van-tab title="全部" data-status=""></van-tab>
+  <van-tab title="待审核" data-status=""></van-tab>
+  <van-tab title="已审核" data-status=""></van-tab>
+</van-tabs>
+<view class='order-list'>
+<block wx:for="{{list}}" wx:key="index">
+  <view class='order-item plr-20'>
+    <view class='flex flex-jus ptb-20 border-b'>
+      <view class='fz-30 c3'>订单号：{{item.ordersn}}</view>
+      <view class='fz-30 c3'>{{item.status == 3 ? "已审核":"待审核"}}</view>
+    </view>
+    <view class='ptb-20 border-b'>
+      <block wx:for="{{item.nogift}}" wx:for-item="nogift" wx:key="idx">
+      <van-card class="width" custom-class="width" title-class="fz-30 c6" price-class="red" num="{{nogift.total}}" price="{{nogift.price}}" title="{{nogift.title}}" thumb="{{nogift.thumb}}" />
+      </block>
+    </view>
+    <view class='flex flex-jus ptb-20'>
+      <view class='fz-26 c3'>共<text class='red'>{{item.nogift.length}}</text>类商品</view>
+      <view class='fz-26 c3'>实付<text class='red'>￥{{item.price}}</text></view>
+    </view>
+  </view>
+</block>
+  <view hidden='{{show}}' class='text-center fz-30 c6' style='padding:20rpx 0;'>暂无更多数据</view>
+<view wx:if="{{show}}" class='text-center fz-30 c6' style='padding:20rpx 0;' bindtap='getMoreData'>加载更多 >></view>
+</view>

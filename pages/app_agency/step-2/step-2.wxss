@@ -3,8 +3,10 @@ image{
 }
 .goods-list{
   position: absolute;
-  top: 212rpx;
+  top: 200rpx;
   bottom: 300rpx;
+  left: 0;
+  right: 0;
   background-color: #fff;
   overflow: scroll;
 }

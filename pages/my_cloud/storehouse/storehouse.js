@@ -48,6 +48,10 @@ Page({
     })
   },
   onSubmit(){
+    if(!this.data.num){
+      core.toast("请选择产品", "none")
+      return;
+    }
     var json = [],index = 0;
     this.data.list.forEach(item => {
       if (item.hasoption == 0 && item.count > 0){
@@ -75,13 +79,16 @@ Page({
       key: "stockList",
       data: json
     })
+    wx.navigateTo({
+      url: '../submit_doc/submit_doc',
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
     var that = this;
-    core.get("goods/getAgentGoods", {}, res => {
+    core.get("goods/getAgentGoods", {myinventory:'myinventory'}, res => {
       that.setData({
         list: res.goodslist
       })

@@ -9,10 +9,10 @@
     <view class='flex flex-column flex-jus'>
       <view class='fz-24 c9 text-right {{showStock ? "op":""}}'>库存{{goodsData.mstock}}件</view>
       <view>
-        <block wx:if="{{goodsData.hasoption != 1}}">
+        <block wx:if="{{goodsData.hasoption != 1 && showStepper}}">
           <van-stepper value="{{ 0 }}" integer min="0" max="1000" step="1" bind:change="onChange" plus-class="add-btn" minus-class="add-btn" input-class="input-class" data-type="parent" />
         </block>
-        <block wx:if="{{goodsData.hasoption == 1}}">
+        <block wx:if="{{goodsData.hasoption == 1 && showStepper}}">
           <view class='show-list {{show ? "":"on"}}' bindtap='showList'>
             <van-icon name="arrow" color='#ffffff'/>
           </view>

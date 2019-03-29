@@ -6,7 +6,8 @@ Component({
   properties: {
     goodsData:Object,
     itemIndex:Number,
-    showStock:Boolean
+    showStock:Boolean,
+    showStepper:Boolean
   },
 
   /**
